@@ -1,0 +1,53 @@
+/* чем мы занимаемся */
+.boxes {
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    display: block;
+    margin-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .list {
+    @extend %flex-wrap;
+  }
+
+  .item:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+
+  .item:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  }
+
+  .item {
+    position: relative;
+  }
+
+  .link::before {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 70px;
+    background: $img-overlay-2;
+
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.boxes-text {
+  position: absolute;
+  bottom: 0;
+
+  margin: 0;
+  width: 100%;
+  height: 70px;
+
+  @extend %centered;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $white;
+}

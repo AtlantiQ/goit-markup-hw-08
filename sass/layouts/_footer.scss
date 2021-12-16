@@ -1,0 +1,196 @@
+// Оформление футера
+
+.footer-nav {
+  background-color: $background;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.address {
+  color: $white;
+
+  @include transition(color);
+
+  @media screen and (max-width: $desktop2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.info {
+  color: $rgba-footer;
+
+  @include transition(color);
+
+  @media screen and (max-width: $desktop2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Стили для адреса в футере */
+.adress-list {
+  display: inline-block;
+  font-style: normal;
+  width: 231px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.footer-nav .item + .item {
+  margin-top: 9px;
+}
+
+.tittle-connect,
+.subscribe-tittle {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $white;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: $desktop2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.subscribe-tittle {
+  @media screen and (max-width: $desktop2) {
+    margin-top: 60px;
+  }
+}
+
+.tittle-connect {
+  @media screen and (max-width: $tablet2) {
+    margin-top: 60px;
+  }
+}
+
+.address-footer {
+  @media screen and (max-width: $desktop2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.fotter-all {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.connect-list {
+  display: flex;
+
+  @media screen and (max-width: $desktop2) {
+    justify-content: center;
+  }
+}
+
+.connect-icon {
+  width: 20px;
+  height: 20px;
+  fill: $white;
+}
+
+.connect-social {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: $conect-icon;
+  @extend %centered;
+  @include transition(background-color);
+}
+
+.connect {
+  @media screen and (min-width: $desktop) {
+    margin-left: 70px;
+  }
+}
+
+/* Стилицация инпута в футере */
+.subscribe-input {
+  width: 100%;
+  height: 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+
+  margin-right: 12px;
+  padding-left: 16px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  align-items: center;
+  color: $footer-rgba;
+
+  @media screen and (max-width: $desktop2) {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+  }
+}
+
+.subscribe .button.ftb {
+  position: relative;
+
+  margin-top: 0px;
+  padding-right: 63px;
+  background-color: $conect-icon;
+  @include transition(background-color);
+
+  @media screen and (max-width: $desktop2) {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.button.ftb:hover,
+.button.ftb:focus {
+  background-color: $hover;
+}
+
+.icon-sub {
+  position: absolute;
+  top: 50%;
+  right: 29px;
+  transform: translateY(-50%);
+
+  fill: $white;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+.tablet-wrap {
+  @media screen and (min-width: $tablet) and (max-width: $desktop2) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.tablet-wrap {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}

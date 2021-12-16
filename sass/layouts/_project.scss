@@ -1,0 +1,93 @@
+/* Стили для проектов */
+.project {
+  margin-bottom: 94px;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+
+  & h3 {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 20px;
+    margin-bottom: 4px;
+    color: $black;
+  }
+
+  & p {
+    color: &grey;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+}
+
+.project .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.project-container .item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  border: 1px solid #eeeeee;
+}
+.project-container .item:nth-child(3n) {
+  margin-right: 0;
+}
+.project-container .item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+.project-container .item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.project-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 34px;
+}
+.overlay-wrapping {
+  position: relative;
+  overflow: hidden;
+}
+.project-wrapping {
+  border: 1 px solid #eeeeee;
+  transition: box-shadow 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay-box {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  justify-content: center;
+  align-items: center;
+  transform: translatey(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.project .overlay {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: $white;
+  margin: 24 px;
+}
+.project .link:hover .overlay-box,
+.project .link:focus .overlay-box {
+  transform: translatey(0);
+}
